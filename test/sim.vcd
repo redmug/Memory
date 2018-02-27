@@ -1,0 +1,1057 @@
+$date
+	Tue Feb 27 00:05:46 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mem_test $end
+$var wire 32 ! ar_addr [31:0] $end
+$var wire 2 " ar_burst [1:0] $end
+$var wire 4 # ar_cache [3:0] $end
+$var wire 1 $ ar_id $end
+$var wire 8 % ar_len [7:0] $end
+$var wire 3 & ar_prot [2:0] $end
+$var wire 4 ' ar_qos [3:0] $end
+$var wire 1 ( ar_ready $end
+$var wire 4 ) ar_region [3:0] $end
+$var wire 3 * ar_size [2:0] $end
+$var wire 1 + ar_valid $end
+$var wire 32 , aw_addr [31:0] $end
+$var wire 2 - aw_burst [1:0] $end
+$var wire 4 . aw_cache [3:0] $end
+$var wire 1 / aw_id $end
+$var wire 8 0 aw_len [7:0] $end
+$var wire 3 1 aw_prot [2:0] $end
+$var wire 4 2 aw_qos [3:0] $end
+$var wire 1 3 aw_ready $end
+$var wire 4 4 aw_region [3:0] $end
+$var wire 3 5 aw_size [2:0] $end
+$var wire 1 6 aw_valid $end
+$var wire 1 7 b_id $end
+$var wire 1 8 b_ready $end
+$var wire 2 9 b_resp [1:0] $end
+$var wire 1 : b_valid $end
+$var wire 65 ; r_data [64:0] $end
+$var wire 2 < r_id [1:0] $end
+$var wire 1 = r_ready $end
+$var wire 2 > r_resp [1:0] $end
+$var wire 1 ? r_valid $end
+$var wire 64 @ w_data [63:0] $end
+$var wire 1 A w_last $end
+$var wire 1 B w_ready $end
+$var wire 8 C w_strb [7:0] $end
+$var wire 1 D w_valid $end
+$var reg 1 E clk $end
+$var reg 1 F random $end
+$var reg 1 G rst $end
+$scope module m1 $end
+$var wire 32 H ar_addr [31:0] $end
+$var wire 2 I ar_burst [1:0] $end
+$var wire 4 J ar_cache [3:0] $end
+$var wire 1 $ ar_id $end
+$var wire 8 K ar_len [7:0] $end
+$var wire 3 L ar_prot [2:0] $end
+$var wire 4 M ar_qos [3:0] $end
+$var wire 4 N ar_region [3:0] $end
+$var wire 3 O ar_size [2:0] $end
+$var wire 1 + ar_valid $end
+$var wire 32 P aw_addr [31:0] $end
+$var wire 2 Q aw_burst [1:0] $end
+$var wire 4 R aw_cache [3:0] $end
+$var wire 1 / aw_id $end
+$var wire 8 S aw_len [7:0] $end
+$var wire 3 T aw_prot [2:0] $end
+$var wire 4 U aw_qos [3:0] $end
+$var wire 4 V aw_region [3:0] $end
+$var wire 3 W aw_size [2:0] $end
+$var wire 1 6 aw_valid $end
+$var wire 1 8 b_ready $end
+$var wire 1 X clk $end
+$var wire 1 = r_ready $end
+$var wire 1 Y rst $end
+$var wire 64 Z w_data [63:0] $end
+$var wire 1 A w_last $end
+$var wire 8 [ w_strb [7:0] $end
+$var wire 1 D w_valid $end
+$var reg 1 \ ar_ready $end
+$var reg 1 ] ar_ready_next $end
+$var reg 1 ^ aw_ready $end
+$var reg 1 _ aw_ready_next $end
+$var reg 1 ` b_id $end
+$var reg 1 a b_id_next $end
+$var reg 2 b b_resp [1:0] $end
+$var reg 2 c b_resp_next [1:0] $end
+$var reg 1 d b_valid $end
+$var reg 1 e b_valid_next $end
+$var reg 65 f r_data [64:0] $end
+$var reg 64 g r_data_next [63:0] $end
+$var reg 2 h r_id [1:0] $end
+$var reg 1 i r_id_next $end
+$var reg 2 j r_resp [1:0] $end
+$var reg 2 k r_resp_next [1:0] $end
+$var reg 1 l r_valid $end
+$var reg 1 m r_valid_next $end
+$var reg 3 n state [2:0] $end
+$var reg 3 o state_next [2:0] $end
+$var reg 1 p w_ready $end
+$var reg 1 q w_ready_next $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xq
+xp
+bx o
+bx n
+xm
+xl
+bx k
+bx j
+xi
+bx h
+bx g
+bx f
+xe
+xd
+bx c
+bx b
+xa
+x`
+x_
+x^
+x]
+x\
+bz [
+bz Z
+1Y
+0X
+bz W
+bz V
+bz U
+bz T
+bz S
+bz R
+bz Q
+bz P
+bz O
+bz N
+bz M
+bz L
+bz K
+bz J
+bz I
+bz H
+1G
+xF
+0E
+zD
+bz C
+xB
+zA
+bz @
+x?
+bx >
+z=
+bx <
+bx ;
+x:
+bx 9
+z8
+x7
+z6
+bz 5
+bz 4
+x3
+bz 2
+bz 1
+bz 0
+z/
+bz .
+bz -
+bz ,
+z+
+bz *
+bz )
+x(
+bz '
+bz &
+bz %
+z$
+bz #
+bz "
+bz !
+$end
+#5000
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx f
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ;
+b0x h
+b0x <
+1E
+1X
+#10000
+0m
+b0 k
+b0 g
+0i
+0]
+0e
+0a
+b0 c
+0q
+0_
+b1 o
+0l
+0?
+b0 j
+b0 >
+b0 f
+b0 ;
+b0 h
+b0 <
+0\
+0(
+0d
+0:
+0`
+07
+b0 b
+b0 9
+0p
+0B
+0^
+03
+b0 n
+0E
+0X
+0G
+0Y
+#15000
+1E
+1X
+#20000
+0E
+0X
+1G
+1Y
+#25000
+b10 o
+b1 n
+1E
+1X
+#30000
+0E
+0X
+#35000
+b0 o
+b10 n
+1E
+1X
+#40000
+0E
+0X
+#45000
+b1 o
+b0 n
+1E
+1X
+#50000
+0E
+0X
+#55000
+b10 o
+b1 n
+1E
+1X
+#60000
+0E
+0X
+#65000
+b0 o
+b10 n
+1E
+1X
+#70000
+0E
+0X
+#75000
+b1 o
+b0 n
+1E
+1X
+#80000
+0E
+0X
+#85000
+b10 o
+b1 n
+1E
+1X
+#90000
+0E
+0X
+#95000
+b0 o
+b10 n
+1E
+1X
+#100000
+0E
+0X
+#105000
+b1 o
+b0 n
+1E
+1X
+#110000
+0E
+0X
+#115000
+b10 o
+b1 n
+1E
+1X
+#120000
+0E
+0X
+#125000
+b0 o
+b10 n
+1E
+1X
+#130000
+0E
+0X
+#135000
+b1 o
+b0 n
+1E
+1X
+#140000
+0E
+0X
+#145000
+b10 o
+b1 n
+1E
+1X
+#150000
+0E
+0X
+#155000
+b0 o
+b10 n
+1E
+1X
+#160000
+0E
+0X
+#165000
+b1 o
+b0 n
+1E
+1X
+#170000
+0E
+0X
+#175000
+b10 o
+b1 n
+1E
+1X
+#180000
+0E
+0X
+#185000
+b0 o
+b10 n
+1E
+1X
+#190000
+0E
+0X
+#195000
+b1 o
+b0 n
+1E
+1X
+#200000
+0E
+0X
+#205000
+b10 o
+b1 n
+1E
+1X
+#210000
+0E
+0X
+#215000
+b0 o
+b10 n
+1E
+1X
+#220000
+0E
+0X
+#225000
+b1 o
+b0 n
+1E
+1X
+#230000
+0E
+0X
+#235000
+b10 o
+b1 n
+1E
+1X
+#240000
+0E
+0X
+#245000
+b0 o
+b10 n
+1E
+1X
+#250000
+0E
+0X
+#255000
+b1 o
+b0 n
+1E
+1X
+#260000
+0E
+0X
+#265000
+b10 o
+b1 n
+1E
+1X
+#270000
+0E
+0X
+#275000
+b0 o
+b10 n
+1E
+1X
+#280000
+0E
+0X
+#285000
+b1 o
+b0 n
+1E
+1X
+#290000
+0E
+0X
+#295000
+b10 o
+b1 n
+1E
+1X
+#300000
+0E
+0X
+#305000
+b0 o
+b10 n
+1E
+1X
+#310000
+0E
+0X
+#315000
+b1 o
+b0 n
+1E
+1X
+#320000
+0E
+0X
+#325000
+b10 o
+b1 n
+1E
+1X
+#330000
+0E
+0X
+#335000
+b0 o
+b10 n
+1E
+1X
+#340000
+0E
+0X
+#345000
+b1 o
+b0 n
+1E
+1X
+#350000
+0E
+0X
+#355000
+b10 o
+b1 n
+1E
+1X
+#360000
+0E
+0X
+#365000
+b0 o
+b10 n
+1E
+1X
+#370000
+0E
+0X
+#375000
+b1 o
+b0 n
+1E
+1X
+#380000
+0E
+0X
+#385000
+b10 o
+b1 n
+1E
+1X
+#390000
+0E
+0X
+#395000
+b0 o
+b10 n
+1E
+1X
+#400000
+0E
+0X
+#405000
+b1 o
+b0 n
+1E
+1X
+#410000
+0E
+0X
+#415000
+b10 o
+b1 n
+1E
+1X
+#420000
+0E
+0X
+#425000
+b0 o
+b10 n
+1E
+1X
+#430000
+0E
+0X
+#435000
+b1 o
+b0 n
+1E
+1X
+#440000
+0E
+0X
+#445000
+b10 o
+b1 n
+1E
+1X
+#450000
+0E
+0X
+#455000
+b0 o
+b10 n
+1E
+1X
+#460000
+0E
+0X
+#465000
+b1 o
+b0 n
+1E
+1X
+#470000
+0E
+0X
+#475000
+b10 o
+b1 n
+1E
+1X
+#480000
+0E
+0X
+#485000
+b0 o
+b10 n
+1E
+1X
+#490000
+0E
+0X
+#495000
+b1 o
+b0 n
+1E
+1X
+#500000
+0E
+0X
+#505000
+b10 o
+b1 n
+1E
+1X
+#510000
+0E
+0X
+#515000
+b0 o
+b10 n
+1E
+1X
+#520000
+0E
+0X
+#525000
+b1 o
+b0 n
+1E
+1X
+#530000
+0E
+0X
+#535000
+b10 o
+b1 n
+1E
+1X
+#540000
+0E
+0X
+#545000
+b0 o
+b10 n
+1E
+1X
+#550000
+0E
+0X
+#555000
+b1 o
+b0 n
+1E
+1X
+#560000
+0E
+0X
+#565000
+b10 o
+b1 n
+1E
+1X
+#570000
+0E
+0X
+#575000
+b0 o
+b10 n
+1E
+1X
+#580000
+0E
+0X
+#585000
+b1 o
+b0 n
+1E
+1X
+#590000
+0E
+0X
+#595000
+b10 o
+b1 n
+1E
+1X
+#600000
+0E
+0X
+#605000
+b0 o
+b10 n
+1E
+1X
+#610000
+0E
+0X
+#615000
+b1 o
+b0 n
+1E
+1X
+#620000
+0E
+0X
+#625000
+b10 o
+b1 n
+1E
+1X
+#630000
+0E
+0X
+#635000
+b0 o
+b10 n
+1E
+1X
+#640000
+0E
+0X
+#645000
+b1 o
+b0 n
+1E
+1X
+#650000
+0E
+0X
+#655000
+b10 o
+b1 n
+1E
+1X
+#660000
+0E
+0X
+#665000
+b0 o
+b10 n
+1E
+1X
+#670000
+0E
+0X
+#675000
+b1 o
+b0 n
+1E
+1X
+#680000
+0E
+0X
+#685000
+b10 o
+b1 n
+1E
+1X
+#690000
+0E
+0X
+#695000
+b0 o
+b10 n
+1E
+1X
+#700000
+0E
+0X
+#705000
+b1 o
+b0 n
+1E
+1X
+#710000
+0E
+0X
+#715000
+b10 o
+b1 n
+1E
+1X
+#720000
+0E
+0X
+#725000
+b0 o
+b10 n
+1E
+1X
+#730000
+0E
+0X
+#735000
+b1 o
+b0 n
+1E
+1X
+#740000
+0E
+0X
+#745000
+b10 o
+b1 n
+1E
+1X
+#750000
+0E
+0X
+#755000
+b0 o
+b10 n
+1E
+1X
+#760000
+0E
+0X
+#765000
+b1 o
+b0 n
+1E
+1X
+#770000
+0E
+0X
+#775000
+b10 o
+b1 n
+1E
+1X
+#780000
+0E
+0X
+#785000
+b0 o
+b10 n
+1E
+1X
+#790000
+0E
+0X
+#795000
+b1 o
+b0 n
+1E
+1X
+#800000
+0E
+0X
+#805000
+b10 o
+b1 n
+1E
+1X
+#810000
+0E
+0X
+#815000
+b0 o
+b10 n
+1E
+1X
+#820000
+0E
+0X
+#825000
+b1 o
+b0 n
+1E
+1X
+#830000
+0E
+0X
+#835000
+b10 o
+b1 n
+1E
+1X
+#840000
+0E
+0X
+#845000
+b0 o
+b10 n
+1E
+1X
+#850000
+0E
+0X
+#855000
+b1 o
+b0 n
+1E
+1X
+#860000
+0E
+0X
+#865000
+b10 o
+b1 n
+1E
+1X
+#870000
+0E
+0X
+#875000
+b0 o
+b10 n
+1E
+1X
+#880000
+0E
+0X
+#885000
+b1 o
+b0 n
+1E
+1X
+#890000
+0E
+0X
+#895000
+b10 o
+b1 n
+1E
+1X
+#900000
+0E
+0X
+#905000
+b0 o
+b10 n
+1E
+1X
+#910000
+0E
+0X
+#915000
+b1 o
+b0 n
+1E
+1X
+#920000
+0E
+0X
+#925000
+b10 o
+b1 n
+1E
+1X
+#930000
+0E
+0X
+#935000
+b0 o
+b10 n
+1E
+1X
+#940000
+0E
+0X
+#945000
+b1 o
+b0 n
+1E
+1X
+#950000
+0E
+0X
+#955000
+b10 o
+b1 n
+1E
+1X
+#960000
+0E
+0X
+#965000
+b0 o
+b10 n
+1E
+1X
+#970000
+0E
+0X
+#975000
+b1 o
+b0 n
+1E
+1X
+#980000
+0E
+0X
+#985000
+b10 o
+b1 n
+1E
+1X
+#990000
+0E
+0X
+#995000
+b0 o
+b10 n
+1E
+1X
+#1000000
+0E
+0X
+#1005000
+b1 o
+b0 n
+1E
+1X
+#1010000
+0E
+0X
+#1015000
+b10 o
+b1 n
+1E
+1X
+#1020000
+0E
+0X
+0F
+#1025000
+b0 o
+b10 n
+1E
+1X
+#1030000
+0E
+0X
+1F
+#1035000
+b1 o
+b0 n
+1E
+1X
+#1040000
+0E
+0X
