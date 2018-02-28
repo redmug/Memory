@@ -1,5 +1,5 @@
 $date
-	Tue Feb 27 00:05:46 2018
+	Wed Feb 28 00:14:25 2018
 $end
 $version
 	Icarus Verilog
@@ -29,21 +29,21 @@ $var wire 4 2 aw_qos [3:0] $end
 $var wire 1 3 aw_ready $end
 $var wire 4 4 aw_region [3:0] $end
 $var wire 3 5 aw_size [2:0] $end
-$var wire 1 6 aw_valid $end
-$var wire 1 7 b_id $end
-$var wire 1 8 b_ready $end
-$var wire 2 9 b_resp [1:0] $end
-$var wire 1 : b_valid $end
-$var wire 65 ; r_data [64:0] $end
-$var wire 2 < r_id [1:0] $end
-$var wire 1 = r_ready $end
-$var wire 2 > r_resp [1:0] $end
-$var wire 1 ? r_valid $end
-$var wire 64 @ w_data [63:0] $end
-$var wire 1 A w_last $end
-$var wire 1 B w_ready $end
-$var wire 8 C w_strb [7:0] $end
-$var wire 1 D w_valid $end
+$var wire 1 6 b_id $end
+$var wire 1 7 b_ready $end
+$var wire 2 8 b_resp [1:0] $end
+$var wire 1 9 b_valid $end
+$var wire 65 : r_data [64:0] $end
+$var wire 2 ; r_id [1:0] $end
+$var wire 1 < r_ready $end
+$var wire 2 = r_resp [1:0] $end
+$var wire 1 > r_valid $end
+$var wire 64 ? w_data [63:0] $end
+$var wire 1 @ w_last $end
+$var wire 1 A w_ready $end
+$var wire 8 B w_strb [7:0] $end
+$var wire 1 C w_valid $end
+$var reg 1 D aw_valid $end
 $var reg 1 E clk $end
 $var reg 1 F random $end
 $var reg 1 G rst $end
@@ -65,70 +65,80 @@ $var wire 1 / aw_id $end
 $var wire 8 S aw_len [7:0] $end
 $var wire 3 T aw_prot [2:0] $end
 $var wire 4 U aw_qos [3:0] $end
+$var wire 1 3 aw_ready $end
 $var wire 4 V aw_region [3:0] $end
 $var wire 3 W aw_size [2:0] $end
-$var wire 1 6 aw_valid $end
-$var wire 1 8 b_ready $end
-$var wire 1 X clk $end
-$var wire 1 = r_ready $end
-$var wire 1 Y rst $end
-$var wire 64 Z w_data [63:0] $end
-$var wire 1 A w_last $end
-$var wire 8 [ w_strb [7:0] $end
-$var wire 1 D w_valid $end
-$var reg 1 \ ar_ready $end
-$var reg 1 ] ar_ready_next $end
-$var reg 1 ^ aw_ready $end
-$var reg 1 _ aw_ready_next $end
-$var reg 1 ` b_id $end
-$var reg 1 a b_id_next $end
-$var reg 2 b b_resp [1:0] $end
-$var reg 2 c b_resp_next [1:0] $end
-$var reg 1 d b_valid $end
-$var reg 1 e b_valid_next $end
-$var reg 65 f r_data [64:0] $end
-$var reg 64 g r_data_next [63:0] $end
-$var reg 2 h r_id [1:0] $end
-$var reg 1 i r_id_next $end
-$var reg 2 j r_resp [1:0] $end
-$var reg 2 k r_resp_next [1:0] $end
-$var reg 1 l r_valid $end
-$var reg 1 m r_valid_next $end
-$var reg 3 n state [2:0] $end
-$var reg 3 o state_next [2:0] $end
-$var reg 1 p w_ready $end
-$var reg 1 q w_ready_next $end
+$var wire 1 X aw_valid $end
+$var wire 1 7 b_ready $end
+$var wire 1 Y clk $end
+$var wire 1 Z down_w $end
+$var wire 1 < r_ready $end
+$var wire 1 [ rst $end
+$var wire 1 \ stall_w $end
+$var wire 1 ] up_w $end
+$var wire 64 ^ w_data [63:0] $end
+$var wire 1 @ w_last $end
+$var wire 8 _ w_strb [7:0] $end
+$var wire 1 C w_valid $end
+$var reg 1 ` ar_ready $end
+$var reg 1 a ar_ready_next $end
+$var reg 1 b aw_ready_next $end
+$var reg 1 c b_id $end
+$var reg 1 d b_id_next $end
+$var reg 2 e b_resp [1:0] $end
+$var reg 2 f b_resp_next [1:0] $end
+$var reg 1 g b_valid $end
+$var reg 1 h b_valid_next $end
+$var reg 2 i outstandaing_w [1:0] $end
+$var reg 2 j outstandaing_w_next [1:0] $end
+$var reg 65 k r_data [64:0] $end
+$var reg 64 l r_data_next [63:0] $end
+$var reg 2 m r_id [1:0] $end
+$var reg 1 n r_id_next $end
+$var reg 2 o r_resp [1:0] $end
+$var reg 2 p r_resp_next [1:0] $end
+$var reg 1 q r_valid $end
+$var reg 1 r r_valid_next $end
+$var reg 3 s state [2:0] $end
+$var reg 3 t state_next [2:0] $end
+$var reg 1 u w_ready $end
+$var reg 1 v w_ready_next $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+xv
+xu
+bx t
+bx s
+xr
 xq
-xp
+bx p
 bx o
-bx n
-xm
-xl
+xn
+bx m
+bx l
 bx k
 bx j
-xi
-bx h
-bx g
+bx i
+xh
+xg
 bx f
-xe
+bx e
 xd
-bx c
-bx b
+xc
+xb
 xa
 x`
-x_
-x^
+bz _
+bz ^
 x]
 x\
-bz [
-bz Z
-1Y
-0X
+1[
+xZ
+0Y
+xX
 bz W
 bz V
 bz U
@@ -148,21 +158,21 @@ bz H
 1G
 xF
 0E
-zD
-bz C
-xB
-zA
-bz @
-x?
-bx >
-z=
-bx <
+xD
+zC
+bz B
+xA
+z@
+bz ?
+x>
+bx =
+z<
 bx ;
-x:
-bx 9
-z8
-x7
-z6
+bx :
+x9
+bx 8
+z7
+x6
 bz 5
 bz 4
 x3
@@ -186,872 +196,765 @@ bz "
 bz !
 $end
 #5000
-b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx f
-b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ;
-b0x h
-b0x <
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx k
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx :
+b0x m
+b0x ;
 1E
-1X
+1Y
 #10000
-0m
-b0 k
-b0 g
-0i
-0]
-0e
-0a
-b0 c
-0q
-0_
-b1 o
-0l
-0?
 b0 j
-b0 >
-b0 f
-b0 ;
-b0 h
-b0 <
-0\
-0(
+13
+0Z
+0r
+b0 p
+b0 l
+0n
+0a
+0h
 0d
-0:
+b0 f
+0v
+b1 t
+b0 i
+0\
+0q
+0>
+b0 o
+b0 =
+b0 k
+b0 :
+b0 m
+b0 ;
 0`
-07
-b0 b
-b0 9
-0p
-0B
-0^
-03
-b0 n
+0(
+0g
+09
+0c
+06
+b0 e
+b0 8
+0u
+0A
+b0 s
 0E
-0X
-0G
 0Y
+0G
+0[
 #15000
 1E
-1X
+1Y
 #20000
 0E
-0X
+0Y
 1G
-1Y
+1[
 #25000
-b10 o
-b1 n
+1b
+b1 s
 1E
-1X
+1Y
 #30000
+b1 j
+1]
 0E
-0X
-#35000
-b0 o
-b10 n
-1E
+0Y
+1D
 1X
+#35000
+b10 j
+b1 i
+1E
+1Y
 #40000
+b1 j
+0]
 0E
+0Y
+0D
 0X
 #45000
-b1 o
-b0 n
 1E
-1X
+1Y
 #50000
+b10 j
+1]
 0E
-0X
-#55000
-b10 o
-b1 n
-1E
+0Y
+1D
 1X
+#55000
+b11 j
+b10 i
+1E
+1Y
 #60000
+b10 j
+0]
 0E
+0Y
+0D
 0X
 #65000
-b0 o
-b10 n
 1E
-1X
+1Y
 #70000
+b11 j
+1]
 0E
-0X
-#75000
-b1 o
-b0 n
-1E
+0Y
+1D
 1X
+#75000
+0]
+b11 j
+03
+b11 i
+1\
+1E
+1Y
 #80000
 0E
+0Y
+0D
 0X
 #85000
-b10 o
-b1 n
 1E
-1X
+1Y
 #90000
 0E
-0X
-#95000
-b0 o
-b10 n
-1E
+0Y
+1D
 1X
+#95000
+1E
+1Y
 #100000
 0E
+0Y
+0D
 0X
 #105000
-b1 o
-b0 n
 1E
-1X
+1Y
 #110000
+b0 j
+13
 0E
-0X
+0Y
+b0 i
+0\
 #115000
-b10 o
-b1 n
 1E
-1X
+1Y
 #120000
 0E
-0X
+0Y
 #125000
-b0 o
-b10 n
 1E
-1X
+1Y
 #130000
 0E
-0X
+0Y
 #135000
-b1 o
-b0 n
 1E
-1X
+1Y
 #140000
 0E
-0X
+0Y
 #145000
-b10 o
-b1 n
 1E
-1X
+1Y
 #150000
 0E
-0X
+0Y
 #155000
-b0 o
-b10 n
 1E
-1X
+1Y
 #160000
 0E
-0X
+0Y
 #165000
-b1 o
-b0 n
 1E
-1X
+1Y
 #170000
 0E
-0X
+0Y
 #175000
-b10 o
-b1 n
 1E
-1X
+1Y
 #180000
 0E
-0X
+0Y
 #185000
-b0 o
-b10 n
 1E
-1X
+1Y
 #190000
 0E
-0X
+0Y
 #195000
-b1 o
-b0 n
 1E
-1X
+1Y
 #200000
 0E
-0X
+0Y
 #205000
-b10 o
-b1 n
 1E
-1X
+1Y
 #210000
 0E
-0X
+0Y
 #215000
-b0 o
-b10 n
 1E
-1X
+1Y
 #220000
 0E
-0X
+0Y
 #225000
-b1 o
-b0 n
 1E
-1X
+1Y
 #230000
 0E
-0X
+0Y
 #235000
-b10 o
-b1 n
 1E
-1X
+1Y
 #240000
 0E
-0X
+0Y
 #245000
-b0 o
-b10 n
 1E
-1X
+1Y
 #250000
 0E
-0X
+0Y
 #255000
-b1 o
-b0 n
 1E
-1X
+1Y
 #260000
 0E
-0X
+0Y
 #265000
-b10 o
-b1 n
 1E
-1X
+1Y
 #270000
 0E
-0X
+0Y
 #275000
-b0 o
-b10 n
 1E
-1X
+1Y
 #280000
 0E
-0X
+0Y
 #285000
-b1 o
-b0 n
 1E
-1X
+1Y
 #290000
 0E
-0X
+0Y
 #295000
-b10 o
-b1 n
 1E
-1X
+1Y
 #300000
 0E
-0X
+0Y
 #305000
-b0 o
-b10 n
 1E
-1X
+1Y
 #310000
 0E
-0X
+0Y
 #315000
-b1 o
-b0 n
 1E
-1X
+1Y
 #320000
 0E
-0X
+0Y
 #325000
-b10 o
-b1 n
 1E
-1X
+1Y
 #330000
 0E
-0X
+0Y
 #335000
-b0 o
-b10 n
 1E
-1X
+1Y
 #340000
 0E
-0X
+0Y
 #345000
-b1 o
-b0 n
 1E
-1X
+1Y
 #350000
 0E
-0X
+0Y
 #355000
-b10 o
-b1 n
 1E
-1X
+1Y
 #360000
 0E
-0X
+0Y
 #365000
-b0 o
-b10 n
 1E
-1X
+1Y
 #370000
 0E
-0X
+0Y
 #375000
-b1 o
-b0 n
 1E
-1X
+1Y
 #380000
 0E
-0X
+0Y
 #385000
-b10 o
-b1 n
 1E
-1X
+1Y
 #390000
 0E
-0X
+0Y
 #395000
-b0 o
-b10 n
 1E
-1X
+1Y
 #400000
 0E
-0X
+0Y
 #405000
-b1 o
-b0 n
 1E
-1X
+1Y
 #410000
 0E
-0X
+0Y
 #415000
-b10 o
-b1 n
 1E
-1X
+1Y
 #420000
 0E
-0X
+0Y
 #425000
-b0 o
-b10 n
 1E
-1X
+1Y
 #430000
 0E
-0X
+0Y
 #435000
-b1 o
-b0 n
 1E
-1X
+1Y
 #440000
 0E
-0X
+0Y
 #445000
-b10 o
-b1 n
 1E
-1X
+1Y
 #450000
 0E
-0X
+0Y
 #455000
-b0 o
-b10 n
 1E
-1X
+1Y
 #460000
 0E
-0X
+0Y
 #465000
-b1 o
-b0 n
 1E
-1X
+1Y
 #470000
 0E
-0X
+0Y
 #475000
-b10 o
-b1 n
 1E
-1X
+1Y
 #480000
 0E
-0X
+0Y
 #485000
-b0 o
-b10 n
 1E
-1X
+1Y
 #490000
 0E
-0X
+0Y
 #495000
-b1 o
-b0 n
 1E
-1X
+1Y
 #500000
 0E
-0X
+0Y
 #505000
-b10 o
-b1 n
 1E
-1X
+1Y
 #510000
 0E
-0X
+0Y
 #515000
-b0 o
-b10 n
 1E
-1X
+1Y
 #520000
 0E
-0X
+0Y
 #525000
-b1 o
-b0 n
 1E
-1X
+1Y
 #530000
 0E
-0X
+0Y
 #535000
-b10 o
-b1 n
 1E
-1X
+1Y
 #540000
 0E
-0X
+0Y
 #545000
-b0 o
-b10 n
 1E
-1X
+1Y
 #550000
 0E
-0X
+0Y
 #555000
-b1 o
-b0 n
 1E
-1X
+1Y
 #560000
 0E
-0X
+0Y
 #565000
-b10 o
-b1 n
 1E
-1X
+1Y
 #570000
 0E
-0X
+0Y
 #575000
-b0 o
-b10 n
 1E
-1X
+1Y
 #580000
 0E
-0X
+0Y
 #585000
-b1 o
-b0 n
 1E
-1X
+1Y
 #590000
 0E
-0X
+0Y
 #595000
-b10 o
-b1 n
 1E
-1X
+1Y
 #600000
 0E
-0X
+0Y
 #605000
-b0 o
-b10 n
 1E
-1X
+1Y
 #610000
 0E
-0X
+0Y
 #615000
-b1 o
-b0 n
 1E
-1X
+1Y
 #620000
 0E
-0X
+0Y
 #625000
-b10 o
-b1 n
 1E
-1X
+1Y
 #630000
 0E
-0X
+0Y
 #635000
-b0 o
-b10 n
 1E
-1X
+1Y
 #640000
 0E
-0X
+0Y
 #645000
-b1 o
-b0 n
 1E
-1X
+1Y
 #650000
 0E
-0X
+0Y
 #655000
-b10 o
-b1 n
 1E
-1X
+1Y
 #660000
 0E
-0X
+0Y
 #665000
-b0 o
-b10 n
 1E
-1X
+1Y
 #670000
 0E
-0X
+0Y
 #675000
-b1 o
-b0 n
 1E
-1X
+1Y
 #680000
 0E
-0X
+0Y
 #685000
-b10 o
-b1 n
 1E
-1X
+1Y
 #690000
 0E
-0X
+0Y
 #695000
-b0 o
-b10 n
 1E
-1X
+1Y
 #700000
 0E
-0X
+0Y
 #705000
-b1 o
-b0 n
 1E
-1X
+1Y
 #710000
 0E
-0X
+0Y
 #715000
-b10 o
-b1 n
 1E
-1X
+1Y
 #720000
 0E
-0X
+0Y
 #725000
-b0 o
-b10 n
 1E
-1X
+1Y
 #730000
 0E
-0X
+0Y
 #735000
-b1 o
-b0 n
 1E
-1X
+1Y
 #740000
 0E
-0X
+0Y
 #745000
-b10 o
-b1 n
 1E
-1X
+1Y
 #750000
 0E
-0X
+0Y
 #755000
-b0 o
-b10 n
 1E
-1X
+1Y
 #760000
 0E
-0X
+0Y
 #765000
-b1 o
-b0 n
 1E
-1X
+1Y
 #770000
 0E
-0X
+0Y
 #775000
-b10 o
-b1 n
 1E
-1X
+1Y
 #780000
 0E
-0X
+0Y
 #785000
-b0 o
-b10 n
 1E
-1X
+1Y
 #790000
 0E
-0X
+0Y
 #795000
-b1 o
-b0 n
 1E
-1X
+1Y
 #800000
 0E
-0X
+0Y
 #805000
-b10 o
-b1 n
 1E
-1X
+1Y
 #810000
 0E
-0X
+0Y
 #815000
-b0 o
-b10 n
 1E
-1X
+1Y
 #820000
 0E
-0X
+0Y
 #825000
-b1 o
-b0 n
 1E
-1X
+1Y
 #830000
 0E
-0X
+0Y
 #835000
-b10 o
-b1 n
 1E
-1X
+1Y
 #840000
 0E
-0X
+0Y
 #845000
-b0 o
-b10 n
 1E
-1X
+1Y
 #850000
 0E
-0X
+0Y
 #855000
-b1 o
-b0 n
 1E
-1X
+1Y
 #860000
 0E
-0X
+0Y
 #865000
-b10 o
-b1 n
 1E
-1X
+1Y
 #870000
 0E
-0X
+0Y
 #875000
-b0 o
-b10 n
 1E
-1X
+1Y
 #880000
 0E
-0X
+0Y
 #885000
-b1 o
-b0 n
 1E
-1X
+1Y
 #890000
 0E
-0X
+0Y
 #895000
-b10 o
-b1 n
 1E
-1X
+1Y
 #900000
 0E
-0X
+0Y
 #905000
-b0 o
-b10 n
 1E
-1X
+1Y
 #910000
 0E
-0X
+0Y
 #915000
-b1 o
-b0 n
 1E
-1X
+1Y
 #920000
 0E
-0X
+0Y
 #925000
-b10 o
-b1 n
 1E
-1X
+1Y
 #930000
 0E
-0X
+0Y
 #935000
-b0 o
-b10 n
 1E
-1X
+1Y
 #940000
 0E
-0X
+0Y
 #945000
-b1 o
-b0 n
 1E
-1X
+1Y
 #950000
 0E
-0X
+0Y
 #955000
-b10 o
-b1 n
 1E
-1X
+1Y
 #960000
 0E
-0X
+0Y
 #965000
-b0 o
-b10 n
 1E
-1X
+1Y
 #970000
 0E
-0X
+0Y
 #975000
-b1 o
-b0 n
 1E
-1X
+1Y
 #980000
 0E
-0X
+0Y
 #985000
-b10 o
-b1 n
 1E
-1X
+1Y
 #990000
 0E
-0X
+0Y
 #995000
-b0 o
-b10 n
 1E
-1X
+1Y
 #1000000
 0E
-0X
+0Y
 #1005000
-b1 o
-b0 n
 1E
-1X
+1Y
 #1010000
 0E
-0X
+0Y
 #1015000
-b10 o
-b1 n
 1E
-1X
+1Y
 #1020000
 0E
-0X
-0F
+0Y
 #1025000
-b0 o
-b10 n
 1E
-1X
+1Y
 #1030000
 0E
-0X
-1F
+0Y
 #1035000
-b1 o
-b0 n
 1E
-1X
+1Y
 #1040000
 0E
-0X
+0Y
+#1045000
+1E
+1Y
+#1050000
+0E
+0Y
+#1055000
+1E
+1Y
+#1060000
+0E
+0Y
+#1065000
+1E
+1Y
+#1070000
+0E
+0Y
+#1075000
+1E
+1Y
+#1080000
+0E
+0Y
+#1085000
+1E
+1Y
+#1090000
+0E
+0Y
+#1095000
+1E
+1Y
+#1100000
+0E
+0Y
+#1105000
+1E
+1Y
+#1110000
+0E
+0Y
+0F
+#1115000
+1E
+1Y
+#1120000
+0E
+0Y
+1F
+#1125000
+1E
+1Y
+#1130000
+0E
+0Y

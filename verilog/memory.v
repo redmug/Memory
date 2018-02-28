@@ -4,6 +4,7 @@
 `define INIT 3'b001
 `define WAIT_AW 3'b010
 `define WAIT_W 3'b011
+`define MAX_STATE 2'b011
 
 module memory(clk,
               rst,
@@ -68,7 +69,7 @@ module memory(clk,
   input    wire [3:0]               aw_qos;
   input    wire [3:0]               aw_region;
   //input    wire       aw_user,
-  output   reg                      aw_ready;
+  output   wire                      aw_ready;
   input    wire                     aw_valid;
 //W
   input    wire [DATA_WIDTH-1:0]    w_data;
@@ -116,12 +117,25 @@ module memory(clk,
   reg [DATA_WIDTH-1:0]  r_data_next;
   reg [1:0]             r_resp_next;
   reg                   r_valid_next;
+  reg [1:0]             outstandaing_w, outstandaing_w_next;
+  wire                  up_w;
+  wire                  down_w;
+  wire                  stall_w;
+
+
+
+  assign stall_w = &(outstandaing_w);
+  assign up_w = (aw_ready & aw_valid);
+  assign down_w = (b_ready & b_valid);
+
+  assign aw_ready = ~stall_w;
+  //assign b_valid = ;
 
 always@(posedge clk or negedge rst) begin
   if(~rst)begin
     //AW / W / R
     state     <=  `START;
-    aw_ready  <=  1'b0;
+//    aw_ready  <=  1'b0;
     w_ready   <=  1'b0;
     b_resp    <=  2'b00;
     b_id      <=  'b0;
@@ -131,10 +145,12 @@ always@(posedge clk or negedge rst) begin
     r_data    <=  'b0;
     r_resp    <=  2'b0;
     r_valid   <=  1'b0;
+    //other
+    outstandaing_w <= 'b0;
   end
   else begin
     state     <=  state_next;
-    aw_ready  <=  aw_ready_next;
+//    aw_ready  <=  aw_ready_next;
     w_ready   <=  w_ready_next;
     b_resp    <=  b_resp_next;
     b_id      <=  b_id_next;
@@ -144,14 +160,34 @@ always@(posedge clk or negedge rst) begin
     r_data    <=  r_data_next;
     r_resp    <=  r_resp_next;
     r_valid   <=  r_valid_next;
+    //other
+    outstandaing_w <= outstandaing_w_next;
   end
 end
-
+//tracking
 always@(*)begin
-  state_next     =    state+1;
-  if(state+1 == 3'b100)
-    state_next = 3'b000;
-  aw_ready_next  =    aw_ready;
+  outstandaing_w_next = outstandaing_w;
+  case({up_w,down_w})
+    2'b00:begin
+    //nothing happens
+    end
+    2'b01:begin
+    //received a B resp - decrement
+    outstandaing_w_next = outstandaing_w - 1;
+    end
+    2'b10:begin
+    //recieved a AW trans - increment
+    outstandaing_w_next = outstandaing_w + 1;
+    end
+    2'b11:begin
+    //recieved B resp and AW trans
+    end
+  endcase
+end
+//main
+always@(*)begin
+  state_next     =    state;
+//  aw_ready_next  =    ~stall_w;
   w_ready_next   =    w_ready;
   b_resp_next    =    b_resp;
   b_id_next      =    b_id;
@@ -161,12 +197,19 @@ always@(*)begin
   r_data_next    =    r_data;
   r_resp_next    =    r_resp;
   r_valid_next   =    r_valid;
+
+
+
   case(state)
     `START:begin
+      state_next = `INIT;
     end
     `INIT:begin
+      aw_ready_next = 1'b1;   //ready to recieve a write
+
     end
     `WAIT_AW:begin
+
     end
     `WAIT_W:begin
     end
