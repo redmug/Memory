@@ -1,4 +1,4 @@
-`include "../verilog/memory.v"
+//`include "../verilog/memory.v"
 `timescale 1ns / 1ps
 
 `define ID_WIDTH 1
